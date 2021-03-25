@@ -32,6 +32,9 @@
 		97576E1E2609D2F0009CAD26 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97576E1D2609D2F0009CAD26 /* APIManager.swift */; };
 		97576E2B2609D3B2009CAD26 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97576E2A2609D3B2009CAD26 /* Logger.swift */; };
 		97576E2F2609D6D4009CAD26 /* DataType+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97576E2E2609D6D4009CAD26 /* DataType+Helper.swift */; };
+		977374BC260C884A006B6783 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977374BA260C884A006B6783 /* CameraViewController.swift */; };
+		977374BD260C884A006B6783 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977374BB260C884A006B6783 /* CameraViewController.xib */; };
+		97A0B321260C3D10008A1DB1 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A0B320260C3D10008A1DB1 /* CameraManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		97576E1D2609D2F0009CAD26 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		97576E2A2609D3B2009CAD26 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		97576E2E2609D6D4009CAD26 /* DataType+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataType+Helper.swift"; sourceTree = "<group>"; };
+		977374BA260C884A006B6783 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		977374BB260C884A006B6783 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		97A0B320260C3D10008A1DB1 /* CameraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 				972947DA2609CE6700706C42 /* Assets.xcassets */,
 				972947DC2609CE6700706C42 /* LaunchScreen.storyboard */,
 				972947DF2609CE6700706C42 /* Info.plist */,
+				977374B9260C883A006B6783 /* View */,
 				972947E62609CE6E00706C42 /* General */,
 			);
 			path = "swift-helper";
@@ -167,9 +174,19 @@
 		97576E182609D0B5009CAD26 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				97A0B320260C3D10008A1DB1 /* CameraManager.swift */,
 				97576E1D2609D2F0009CAD26 /* APIManager.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		977374B9260C883A006B6783 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				977374BA260C884A006B6783 /* CameraViewController.swift */,
+				977374BB260C884A006B6783 /* CameraViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +250,7 @@
 				972947DB2609CE6700706C42 /* Assets.xcassets in Resources */,
 				972947F52609CECC00706C42 /* TToast.xib in Resources */,
 				972947D92609CE6600706C42 /* Main.storyboard in Resources */,
+				977374BD260C884A006B6783 /* CameraViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +264,7 @@
 				972948112609CFA100706C42 /* ViewController+Helper.swift in Sources */,
 				97576E1E2609D2F0009CAD26 /* APIManager.swift in Sources */,
 				972947D62609CE6600706C42 /* ViewController.swift in Sources */,
+				977374BC260C884A006B6783 /* CameraViewController.swift in Sources */,
 				972948012609CF8D00706C42 /* MOLHLanguage.swift in Sources */,
 				972948022609CF8D00706C42 /* MOLH.swift in Sources */,
 				972947EA2609CEAF00706C42 /* Date+Helper.swift in Sources */,
@@ -253,6 +272,7 @@
 				972948052609CF8D00706C42 /* MOLHFont.swift in Sources */,
 				97576E2F2609D6D4009CAD26 /* DataType+Helper.swift in Sources */,
 				972947F02609CEC500706C42 /* Languages+Helper.swift in Sources */,
+				97A0B321260C3D10008A1DB1 /* CameraManager.swift in Sources */,
 				972948142609CFA600706C42 /* View+Helper.swift in Sources */,
 				97576E1A2609D0C7009CAD26 /* Global.swift in Sources */,
 				972947F92609CF1100706C42 /* UIImage+Helper.swift in Sources */,

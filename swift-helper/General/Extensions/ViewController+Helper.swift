@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVKit
 
 // MARK: ViewController Dialog
 extension UIViewController {
@@ -90,6 +91,16 @@ extension UIViewController {
 		}
 		else {
 			self.dismiss(animated: animated, completion: nil)
+		}
+	}
+	
+	func presentVideo(url: URL) {
+		DispatchQueue.main.async { [weak self] in
+			let objAVPlayerVC = AVPlayerViewController()
+			objAVPlayerVC.player = AVPlayer(url: url)
+			self?.present(objAVPlayerVC, animated: true, completion: {() -> Void in
+				objAVPlayerVC.player?.play()
+			})
 		}
 	}
 }

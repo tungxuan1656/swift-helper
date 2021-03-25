@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="swift_helper" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewPreview" destination="Dgs-iy-IN7" id="k52-Lc-PHz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgs-iy-IN7">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pcL-N9-Ocb">
+                    <rect key="frame" x="164.5" y="383" width="85" height="130"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBf-qy-6Te">
+                            <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                            <state key="normal" title="Record"/>
+                            <connections>
+                                <action selector="onClickButtonRecord:" destination="-1" eventType="touchUpInside" id="Fk1-Jo-1ol"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuM-fi-IeQ">
+                            <rect key="frame" x="0.0" y="50" width="85" height="30"/>
+                            <state key="normal" title="Stop Record"/>
+                            <connections>
+                                <action selector="onClickButtonStopRecord:" destination="-1" eventType="touchUpInside" id="ZJI-EC-CvF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFX-LD-TQt">
+                            <rect key="frame" x="0.0" y="100" width="85" height="30"/>
+                            <state key="normal" title="Capture"/>
+                            <connections>
+                                <action selector="onClickButtonCapture:" destination="-1" eventType="touchUpInside" id="78d-9q-6S5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Dgs-iy-IN7" secondAttribute="bottom" id="6YL-P4-K2O"/>
+                <constraint firstItem="Dgs-iy-IN7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Hfz-TI-0Zp"/>
+                <constraint firstItem="pcL-N9-Ocb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Sbr-5k-a1a"/>
+                <constraint firstItem="pcL-N9-Ocb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Tn9-RS-FkF"/>
+                <constraint firstItem="Dgs-iy-IN7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pq7-Vx-W76"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dgs-iy-IN7" secondAttribute="trailing" id="uoh-sV-z3O"/>
+            </constraints>
+            <point key="canvasLocation" x="76.811594202898561" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
