@@ -403,6 +403,9 @@ open class CameraManager: NSObject, UIGestureRecognizerDelegate {
 	
 	open var recordUsingAudio: Bool = true
 	open var recordingQuality: CameraRecordingQuality = .pixel3x
+	
+	fileprivate var previewWidth: CGFloat = 0
+	fileprivate var previewHeight: CGFloat = 0
 	// MARK: - end tungxuan
 	
     // fileprivate var stillImageOutput: AVCaptureStillImageOutput?
@@ -966,6 +969,7 @@ open class CameraManager: NSObject, UIGestureRecognizerDelegate {
     
     fileprivate func attachZoom(_ view: UIView) {
         DispatchQueue.main.async {
+			print("Setup Zoom")
             self.zoomGesture.addTarget(self, action: #selector(CameraManager._zoomStart(_:)))
             view.addGestureRecognizer(self.zoomGesture)
             self.zoomGesture.delegate = self
@@ -1580,8 +1584,10 @@ open class CameraManager: NSObject, UIGestureRecognizerDelegate {
         attachZoom(view)
         attachFocus(view)
         attachExposure(view)
-        
+		
         DispatchQueue.main.async { () -> Void in
+			self.previewWidth = view.layer.bounds.width
+			self.previewHeight = view.layer.bounds.height
             guard let previewLayer = self.previewLayer else { return }
             previewLayer.frame = view.layer.bounds
             view.clipsToBounds = true
@@ -2372,6 +2378,15 @@ extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
 	
 	public func captureOutput(_ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
 		print("Drop")
+	}
+	
+	fileprivate func cropSampleBufferLikePreview(sample: CMSampleBuffer) -> CMSampleBuffer {
+		let previewRatio = self.previewHeight / self.previewWidth
+		let imageBuffer = CMSampleBufferGetImageBuffer(sample)
+		let width = CVPixelBufferGetDataSize(<#T##pixelBuffer: CVPixelBuffer##CVPixelBuffer#>)
+		
+		
+		return sample
 	}
 }
 
